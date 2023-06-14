@@ -10,7 +10,7 @@ public class GridManager : Singleton<GridManager>
 
     public Grid GetPrefab() => gridPrefab;
 
-    [HideInInspector]public List<GridSpawner> lsSpawners = new List<GridSpawner>();
+     public List<GridSpawner> lsSpawners = new List<GridSpawner>();
     [HideInInspector] public List<Grid> lsGrids = new List<Grid>();
 
     public void OnStart()

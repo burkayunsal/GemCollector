@@ -8,7 +8,7 @@ public class GridSpawner : MonoBehaviour
     public int rows;
     public int columns;
     
-    private void Start()
+    private void Awake()
     {
         GridManager.I.AssignSpawner(this);
     }
