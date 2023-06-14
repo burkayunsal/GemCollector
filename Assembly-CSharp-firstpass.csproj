@@ -689,17 +689,11 @@
      <Reference Include="netstandard">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.22f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Recorder.Editor">
-     <HintPath>/Users/burkayunsal/Documents/Projects/GemCollector/Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.VSCode.Editor">
      <HintPath>/Users/burkayunsal/Documents/Projects/GemCollector/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Shaders">
      <HintPath>/Users/burkayunsal/Documents/Projects/GemCollector/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Recorder.Base">
-     <HintPath>/Users/burkayunsal/Documents/Projects/GemCollector/Library/ScriptAssemblies/Unity.Recorder.Base.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Runtime">
      <HintPath>/Users/burkayunsal/Documents/Projects/GemCollector/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
@@ -775,9 +769,6 @@
      </Reference>
      <Reference Include="Unity.RenderPipelines.Core.Editor">
      <HintPath>/Users/burkayunsal/Documents/Projects/GemCollector/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Recorder">
-     <HintPath>/Users/burkayunsal/Documents/Projects/GemCollector/Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

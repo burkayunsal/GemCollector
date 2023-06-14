@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SellArea : MonoBehaviour
 {
- 
     private bool stopCoroutine = false;
     [SerializeField] private Transform SellPoint;
     
@@ -17,14 +16,14 @@ public class SellArea : MonoBehaviour
     {
         while (!stopCoroutine)
         {
-            yield return new WaitForSeconds(0.025f);
+            StackManager.I.Drop(SellPoint);
+            yield return new WaitForSeconds(0.1f);
         }
     }
 
     public void OnPlayerExit()
     {
         stopCoroutine = true;
-        
     }
 
 }

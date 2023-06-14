@@ -4,16 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Draggable
   - SellArea
-  - Upgrade
-  - Fire
-  - Effects
   - Ground
-  - UpgradeOpen
-  - Dirt
-  - Start
-  - CameraSwitchTrigger
+  - Gem
   layers:
   - Default
   - TransparentFX
@@ -23,8 +16,8 @@ TagManager:
   - UI
   - 
   - 
-  - Draggable
-  - Grain
+  - 
+  - 
   - 
   - 
   - 

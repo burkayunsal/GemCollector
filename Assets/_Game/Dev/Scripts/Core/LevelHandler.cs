@@ -12,10 +12,9 @@ public class LevelHandler : Singleton<LevelHandler>
 
     private void Start()
     {
-        CreateLevel();
+       // CreateLevel();
 
-        TouchHandler.I.Initialize(TouchHandler.I.useJoystick ? TouchHandler.TouchTypes.Joystick : TouchHandler.TouchTypes.Core, isStart: true);
-
+       
     }
 
     public void CreateLevel()
@@ -25,8 +24,7 @@ public class LevelHandler : Singleton<LevelHandler>
         int levelID = allLevels.Length >= 1 ? SaveLoadManager.GetLevel() % allLevels.Length : 0;
 
         crntLevel = Instantiate(testLevel != null ? testLevel : allLevels[levelID], pool);
-
-        GameManager.canStart = true;
+        
     }
 
     public void OnGameStarted()

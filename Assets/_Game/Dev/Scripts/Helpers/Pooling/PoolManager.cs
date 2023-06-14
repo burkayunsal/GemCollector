@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-using MyBox;
+using System;
+using Random = System.Random;
 
 public class PoolManager : Singleton<PoolManager>
 {
@@ -9,16 +11,12 @@ public class PoolManager : Singleton<PoolManager>
     internal struct Pool
     {
         internal Queue<PoolObject> pooledObjects;
-        [MustBeAssigned]
         [SerializeField] internal PoolObject objectPrefab;
-        [PositiveValueOnly]
         [SerializeField] internal int poolSize;
     }
 
-    [SerializeField]
-    private Pool[] pools;
-
-
+    [SerializeField] private Pool[] pools;
+    
     private void Start()
     {
         CreatePools();
@@ -38,8 +36,8 @@ public class PoolManager : Singleton<PoolManager>
 
                 _po.OnCreated();
             }
-
         }
+        GridManager.I.OnStart();
     }
 
     public T GetObject<T>() where T : PoolObject

@@ -10,10 +10,6 @@ public class CameraController : Singleton<CameraController>
     [ConditionalField(nameof(useEditorOffset), false, false)]
     [SerializeField] Vector3 offset;
     bool isInitialized = false;
-    [SerializeField] private float lerpTime;
-
-    private Transform PlayerTransform;
-    public void SetTarget(Transform t) => target = t;
     public void SetOffset(Vector3 endVal) => offset = endVal;
     public void SetOffset(Vector3 endVal, float time)
     {
@@ -26,7 +22,6 @@ public class CameraController : Singleton<CameraController>
 
     private void Start()
     {
-        PlayerTransform = target;
         Initialize();
     }
 
@@ -61,10 +56,5 @@ public class CameraController : Singleton<CameraController>
         {
             transform.position = target.position + offset;
         }
-    }
-
-    void FollowWithLerp()
-    {
-        transform.position = Vector3.Lerp(transform.position, target.position + offset, lerpTime);
     }
 }

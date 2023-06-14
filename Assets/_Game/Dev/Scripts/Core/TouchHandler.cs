@@ -1,4 +1,5 @@
-﻿using MyBox;
+﻿using System;
+using MyBox;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,15 +19,10 @@ public class TouchHandler : Singleton<TouchHandler>
     {
         NONE = -1,
         Core = 0,
-        Joystick = 1,
-        SecondaryMechanic = 2
-            //.....so on
+        Joystick = 1
     }
 
     TouchTypes activeTouch;
-
-    //Delegate Functions. You can change them at spesific parts like end of
-    //the level or at different types of obstacles
 
     private delegate void OnDownAction();
     private OnDownAction OnDown = null;
@@ -43,6 +39,11 @@ public class TouchHandler : Singleton<TouchHandler>
     public bool IsActive() => GameManager.isRunning && canPlay;
     public void Enable(bool isActive) => canPlay = isActive;
 
+    private void Start()
+    {
+        Initialize(useJoystick ? TouchTypes.Joystick : TouchTypes.Core, isStart: true);
+    }
+
     private void Update()
     {
         if (IsActive())
@@ -51,7 +52,6 @@ public class TouchHandler : Singleton<TouchHandler>
 
     public void OnGameStarted()
     {
-        
         Enable(true);
     }
 
@@ -99,11 +99,6 @@ public class TouchHandler : Singleton<TouchHandler>
                 OnUp = JoystickUp;
                 OnDrag = JoystickDrag;
                 break;
-            case TouchTypes.SecondaryMechanic:
-                OnDown = OnDownSecondary;
-                OnUp = OnUpSecondary;
-                OnDrag = OnDragSecondary;
-                break;
             default:
                 OnDown = CoreDown;
                 OnUp = CoreUp;
@@ -132,7 +127,6 @@ public class TouchHandler : Singleton<TouchHandler>
 
 
     #endregion
-
     
     #region JOYSTICK
     void JoystickDown()
@@ -140,8 +134,8 @@ public class TouchHandler : Singleton<TouchHandler>
         fp = Input.mousePosition;
         img_outerCircle.transform.position = fp;
         img_outerCircle.gameObject.SetActive(true);
-        
     }
+    
     void JoystickDrag()
     {
         lp = Input.mousePosition;
@@ -206,19 +200,6 @@ public class TouchHandler : Singleton<TouchHandler>
     
     #endregion
 
-    #endregion
-
-    #region SECONDARY
-
-    void OnDownSecondary()
-    {
-    }
-    void OnDragSecondary()
-    {
-    }
-    void OnUpSecondary()
-    {
-    }
     #endregion
 
 }

@@ -41,15 +41,15 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/_Game/Dev/Scripts/Core/PlayerController.cs" />
+     <Compile Include="Assets/_Game/Dev/Scripts/Game/PlayerController.cs" />
      <Compile Include="Assets/_Game/Dev/Scripts/Core/Level.cs" />
      <Compile Include="Assets/_Game/Dev/Scripts/Core/GameManager.cs" />
-     <Compile Include="Assets/_Game/Dev/Scripts/Game/Coin.cs" />
-     <Compile Include="Assets/_Game/Dev/Scripts/Core/PlayerTrigger.cs" />
+     <Compile Include="Assets/_Game/Dev/Scripts/Game/Gems/Gem.cs" />
+     <Compile Include="Assets/_Game/Dev/Scripts/Game/PlayerTrigger.cs" />
      <Compile Include="Assets/_Game/Dev/Scripts/Core/CameraController.cs" />
      <Compile Include="Assets/_Game/Dev/Scripts/Core/TouchHandler.cs" />
      <Compile Include="Assets/_Game/Dev/Scripts/Helpers/Pooling/PoolManager.cs" />
-     <Compile Include="Assets/_Game/Dev/Scripts/Core/CoinManager.cs" />
+     <Compile Include="Assets/_Game/Dev/Scripts/Game/GemManager.cs" />
      <Compile Include="Assets/_Game/Dev/Scripts/Core/SaveLoadManager.cs" />
      <Compile Include="Assets/_Game/Dev/Scripts/Helpers/UI/CanvasFixer.cs" />
      <Compile Include="Assets/_Game/Dev/Scripts/Helpers/Pooling/PoolObject.cs" />
@@ -59,211 +59,73 @@
      <Compile Include="Assets/_Game/Dev/Scripts/Core/Singleton.cs" />
      <Compile Include="Assets/_Game/Dev/Scripts/Game/SellArea.cs" />
      <Compile Include="Assets/_Game/Dev/Scripts/Helpers/Extentions/DelayedAction.cs" />
-     <Compile Include="Assets/_Game/Dev/Scripts/Helpers/RotateAround.cs" />
+     <Compile Include="Assets/_Game/Dev/Scripts/Game/GridManager.cs" />
+     <Compile Include="Assets/_Game/Dev/Scripts/Game/Grid.cs" />
+     <Compile Include="Assets/_Game/Dev/Scripts/Helpers/Extentions/VectorExtentions.cs" />
+     <Compile Include="Assets/_Game/Dev/Scripts/Game/Gems/PinkGem.cs" />
+     <Compile Include="Assets/_Game/Dev/Scripts/Game/Gems/GreenGem.cs" />
+     <Compile Include="Assets/_Game/Dev/Scripts/Game/Gems/YellowGem.cs" />
+     <Compile Include="Assets/_Game/Dev/Scripts/Game/StackManager.cs" />
+     <Compile Include="Assets/_Game/Dev/Scripts/Game/GridSpawner.cs" />
      <Folder Include="Assets" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Gun" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/OfflineReward" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Potion/Potion2" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Lobby" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/_Icons/ItemIcons" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Sprites by Menu/Win-assets" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/_Icons/ItemIcons/backup/32" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Mission" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Gems" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
      <Folder Include="Assets/TextMesh Pro/Sprites" />
      <Folder Include="Assets/_Game/Art/Fonts/TMPro" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Sprites by Menu/Prize Machine-assets" />
-     <Folder Include="Assets/_Game/Art/Models/Stickman" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/_Icons/ItemIcons/backup/256" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Store" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Sherif Stars" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Diamonds/Diamonds" />
+     <Folder Include="Assets/_Game/Art/Models/StickmanAnim" />
      <Folder Include="Assets/TextMesh Pro/Resources/Sprite Assets" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/LockScreen/_backup" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Pass" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/_Icons/Pictoicons/backup/128" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Lobby_UserInfo" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Read Me" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Skull" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Setting" />
+     <Folder Include="Assets/_Game/Art/Materials/Skybox" />
      <Folder Include="Assets/Resources" />
      <Folder Include="Assets/_Game/Art" />
      <Folder Include="Assets/_Game" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
      <Folder Include="Assets/_Game/Dev" />
-     <Folder Include="Assets/_Game/Dev/Prefabs/Level" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Closebook" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/_Icons/ItemIcons/64" />
      <Folder Include="Assets/_Game/Art/Animations" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/_Icons/Pictoicons/backup" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Gift" />
-     <Folder Include="Assets/_Game/Art/Animations/States/Male" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/PlayBattle_VS" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Sprites by Menu/Home-assets" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Open Book" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/_Icons/Pictoicons/256" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Sprites by Menu/Buttons-assets" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Badge" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Bag" />
+     <Folder Include="Assets/_Game/Art/Materials/Gem" />
      <Folder Include="Assets/TextMesh Pro/Resources/Fonts &amp; Materials" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Emojis PNG/PNG" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/PopupSubscribe" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Cup" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Additional White Icons" />
      <Folder Include="Assets/_Game/Art/Materials" />
      <Folder Include="Assets/_Game/Art/Animations/Controller" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Clock" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites" />
      <Folder Include="Assets/_Game/Dev/Prefabs" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Character_List_Select" />
      <Folder Include="Assets/_Game/Dev/Scenes/Game" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
      <Folder Include="Assets/TextMesh Pro/Resources" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Flag" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Clan/_backup" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Artwork PSD + Screens" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Common" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Play_Continue_Pause_Result" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Wizard Hat" />
+     <Folder Include="Assets/_Game/Dev/Scripts/Game/Gems" />
      <Folder Include="Assets/_Game/Dev/Scripts/Helpers/Pooling" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Gems/Gem 2 Pack" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Bag/Bag 1" />
      <Folder Include="Assets/_Game/Dev/Scripts/Helpers/Extentions" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Mail" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Play" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Loading" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Artwork PSD + Screens/PSD" />
      <Folder Include="Assets/_Game/Art/Sprites" />
      <Folder Include="Assets/TextMesh Pro" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Ranking" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/_Icons/Pictoicons/backup/64" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/LockScreen" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Levleup/_backup" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Diamonds/Diamond 2" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Character_Passive" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Popup" />
-     <Folder Include="Assets/_Game/Dev/Prefabs/UI" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Key" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/_Icons/Pictoicons/512" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Stage" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/_Icons/ItemIcons/backup/128" />
      <Folder Include="Assets/_Game/Art/Models" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Bomb" />
      <Folder Include="Assets/_Game/Dev/Settings" />
-     <Folder Include="Assets/_Game/Art/Animations/States" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Emojis PNG/PNG/Set Emojis-assets" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Token" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/_Icons/Pictoicons" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Clan" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Eye" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Diamonds" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Radial Shine" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Podium" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Target" />
-     <Folder Include="Assets/_Game/Art/Models/3dgem" />
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Bolt" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual" />
      <Folder Include="Assets/_Game/Dev/Scripts/Core" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Diplome" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/_Icons/ItemIcons/512" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
      <Folder Include="Assets/_Game/Dev/Scripts/Game" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Bag/Bag" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Chat" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/AdRemove" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Chest" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Firecracker" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/SettingLanguage" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Equipment_Inventory" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Small Stars" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Hourglass" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Rate" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Icon Club" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Gems/Gem 2" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Inbox" />
      <Folder Include="Assets/TextMesh Pro/Shaders" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Background" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Coins/Coin" />
-     <Folder Include="Assets/_Game/Art/Animations/States/Female" />
      <Folder Include="Assets/TextMesh Pro/Resources/Style Sheets" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Bow" />
      <Folder Include="Assets/TextMesh Pro/Fonts" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/_Icons/ItemIcons/backup/64" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Pills" />
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/_Icons/ItemIcons/backup/512" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Card" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Roulette" />
      <Folder Include="Assets/_Game/Dev/Scripts" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Potion/Potion" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Sword" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/_Icons/Pictoicons/128" />
      <Folder Include="Assets/_Game/Art/Fonts/Bases" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Sprites by Menu/In Game-assets" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/_Icons/ItemIcons/32" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Reward" />
      <Folder Include="Assets/_Game/Dev/Scripts/Helpers/UI" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Hand" />
      <Folder Include="Assets/_Game/Art/Fonts" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/_Icons/Pictoicons/64" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/_Icons/ItemIcons/256" />
      <Folder Include="Assets/_Game/Dev/Scripts/Helpers" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Clover" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Character_Passive/_backup" />
-     <Folder Include="Assets/_Game/Art/Models/2dgem" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/_Icons/ItemIcons/backup" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/_Icons/Pictoicons/backup/32" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Double Sword" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Ball" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Emojis PNG" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Pass/_backup" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Heart" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Glasses" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/_Icons" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Coins" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/_Icons/Pictoicons/backup/512" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Levleup" />
-     <Folder Include="Assets/MarketAssets" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Artwork PSD + Screens/SCREENS" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/_Icons/Pictoicons/32" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
      <Folder Include="Assets/_Game/Dev/Scenes" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Scenes" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/TV" />
      <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Mushroom" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Crown" />
      <Folder Include="Assets/TextMesh Pro/Documentation" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Shield" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Font" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Sprites by Menu" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Equipment_Inventory/_backup" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/LevelUp" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/_Icons/ItemIcons/128" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/_Icons/Pictoicons/backup/256" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Potion" />
-     <Folder Include="Assets/MarketAssets/GUI Mobile Hyper-Casual/Sprites/Items PSD + PNG/Stars" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Tutorial" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Shop" />
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne.json" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
-     <Folder Include="Assets/MarketAssets/GUI Kit Casual/Title" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
@@ -900,17 +762,11 @@
      <Reference Include="netstandard">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.22f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Recorder.Editor">
-     <HintPath>/Users/burkayunsal/Documents/Projects/GemCollector/Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.VSCode.Editor">
      <HintPath>/Users/burkayunsal/Documents/Projects/GemCollector/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Shaders">
      <HintPath>/Users/burkayunsal/Documents/Projects/GemCollector/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Recorder.Base">
-     <HintPath>/Users/burkayunsal/Documents/Projects/GemCollector/Library/ScriptAssemblies/Unity.Recorder.Base.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Runtime">
      <HintPath>/Users/burkayunsal/Documents/Projects/GemCollector/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
@@ -986,9 +842,6 @@
      </Reference>
      <Reference Include="Unity.RenderPipelines.Core.Editor">
      <HintPath>/Users/burkayunsal/Documents/Projects/GemCollector/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Recorder">
-     <HintPath>/Users/burkayunsal/Documents/Projects/GemCollector/Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
