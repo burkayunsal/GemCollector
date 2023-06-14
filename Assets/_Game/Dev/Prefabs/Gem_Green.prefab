@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gemType: 0
   gemName: Green Gem
-  initialPrice: 5
+  initialPrice: 1
   icon: {fileID: 21300000, guid: 2fe9e160ab7074062a1f403988594611, type: 3}
   gemPrefab: {fileID: 3734960842914009707}
   mr: {fileID: 2942472787921318846}

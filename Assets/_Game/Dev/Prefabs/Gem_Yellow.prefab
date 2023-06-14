@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gemType: 2
   gemName: Yellow Gem
-  initialPrice: 15
+  initialPrice: 3
   icon: {fileID: 21300000, guid: d44d75de398a643b7a56e01b8388ce31, type: 3}
   gemPrefab: {fileID: 4428510034885985643}
   mr: {fileID: 2771338960403588286}

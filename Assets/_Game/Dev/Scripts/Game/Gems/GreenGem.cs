@@ -5,5 +5,5 @@ using UnityEngine;
 
 public class GreenGem : Gem
 {
-   
+    
 }

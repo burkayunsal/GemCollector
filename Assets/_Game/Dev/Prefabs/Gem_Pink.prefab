@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gemType: 1
   gemName: Pink Gem
-  initialPrice: 10
+  initialPrice: 2
   icon: {fileID: 21300000, guid: 429bb5eaa5dcf46cd8f932d35137a204, type: 3}
   gemPrefab: {fileID: 4869979075895113677}
   mr: {fileID: 6383105194279802392}
