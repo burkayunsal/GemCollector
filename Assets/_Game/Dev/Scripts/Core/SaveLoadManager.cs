@@ -25,47 +25,20 @@ public class SaveLoadManager : MonoBehaviour
 
     #endregion
 
-    #region GREEN_GEM
+    #region GEM
 
-    const string KEY_GREEN_GEM = "grenGemCount";
+    const string KEY_GEM = "gemCount";
 
-    public static void AddGreenGem()
+    public static void AddGem(GemType gt)
     {
-        PlayerPrefs.SetInt(KEY_GREEN_GEM, GetGreenGem() + 1);
-        UIManager.I.UpdateGreenTxt();
+        PlayerPrefs.SetInt(KEY_GEM + gt, GetGem(gt) + 1);
+        UIManager.I.UpdateTxt();
     }
 
-    public static int GetGreenGem() => PlayerPrefs.GetInt(KEY_GREEN_GEM, 0);
+    public static int GetGem(GemType gt) => PlayerPrefs.GetInt(KEY_GEM +  gt, 0);
 
     #endregion
     
     
-    #region PINK_GEM
-
-    const string KEY_PINK_GEM = "pinkGemCount";
-
-    public static void AddPinkGem()
-    {
-        PlayerPrefs.SetInt(KEY_PINK_GEM, GetPinkGem() + 1);
-        UIManager.I.UpdatePinkTxt();
-    }
-
-    public static int GetPinkGem() => PlayerPrefs.GetInt(KEY_PINK_GEM, 0);
-
-    #endregion
-    
-    
-    #region YELLOW_GEM
-
-    const string KEY_YELLOW_GEM = "YELLOWGemCount";
-
-    public static void AddYellowGem()
-    {
-        PlayerPrefs.SetInt(KEY_YELLOW_GEM, GetYellowGem() + 1);
-        UIManager.I.UpdateYellowTxt();
-    }
-
-    public static int GetYellowGem() => PlayerPrefs.GetInt(KEY_YELLOW_GEM, 0);
-
-    #endregion
+  
 }

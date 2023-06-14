@@ -34,9 +34,7 @@ public class UIManager : Singleton<UIManager>
     {
         FadeInAndOutPanels(pnl.gameIn);
         UpdateCoinTxt();
-        UpdateGreenTxt();
-        UpdatePinkTxt();
-        UpdateYellowTxt();
+        UpdateTxt();
     }
     
     public void OpenPopUp()
@@ -102,21 +100,14 @@ public class UIManager : Singleton<UIManager>
         txt.coinCount.text = SaveLoadManager.GetCoin().ToString("0000");
     }
     
-    public void UpdateGreenTxt()
+    public void UpdateTxt()
     {
-        txt.greenGemCount.text = "Count : " + SaveLoadManager.GetGreenGem().ToString("00");
+        txt.greenGemCount.text = "Count : " + SaveLoadManager.GetGem(GemType.Green).ToString("00");
+        txt.pinkGemCount.text = "Count : " + SaveLoadManager.GetGem(GemType.Pink).ToString("00");
+        txt.yellowGemCount.text ="Count : " + SaveLoadManager.GetGem(GemType.Yellow).ToString("00");
     }
-    
-    public void UpdatePinkTxt()
-    {
-        txt.pinkGemCount.text = "Count : " + SaveLoadManager.GetPinkGem().ToString("00");
-    }
-    public void UpdateYellowTxt()
-    {
-        txt.yellowGemCount.text ="Count : " + SaveLoadManager.GetYellowGem().ToString("00");
-    }
-    
-    
+
+
     [System.Serializable]
     public class Panels
     {

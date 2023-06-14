@@ -29,18 +29,7 @@ public class StackManager : Singleton<StackManager>
       Gem lastGem = GetLastGem();
       if (lastGem != null)
       {
-         if (lastGem.gemType == GemType.Green)
-         {
-            SaveLoadManager.AddGreenGem();
-         } 
-         else if (lastGem.gemType == GemType.Pink)
-         {
-            SaveLoadManager.AddPinkGem();
-         }
-         else
-         {
-            SaveLoadManager.AddYellowGem();
-         }
+         SaveLoadManager.AddGem(lastGem.gemType);
          RemoveGem(lastGem);
          lastGem.OnDrop(targetPos);
       }
